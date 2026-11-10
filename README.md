@@ -1,5 +1,11 @@
 # strands-deepkeep
 
+> **Development moved:** This integration is maintained in the
+> [DeepKeep integrations monorepo](https://github.com/Deepkeepai/deepkeep-integrations/tree/main/integrations/strands).
+> Please open new [issues](https://github.com/Deepkeepai/deepkeep-integrations/issues) and pull requests in the monorepo.
+> Historical source and existing links remain available here.
+> The PyPI package name remains `strands-deepkeep`.
+
 Strands Agents hook provider for the [DeepKeep AI Firewall](https://deepkeep.ai/capabilities/ai-firewall).
 
 DeepKeep runs before a Strands invocation reaches the model and after the model returns. It can block unsafe content, pass safe content through, and apply redacted or modified text returned by DeepKeep.
@@ -52,7 +58,11 @@ export DEEPKEEP_BASE_URL="https://your-deepkeep-instance.example"
 
 ## Strands catalog entry
 
-Submit the integration to Strands by adding `site/src/content/catalog/strands-deepkeep.yaml` to `strands-agents/harness-sdk`:
+The integration was accepted into the Strands catalog in
+[PR #3996](https://github.com/strands-agents/harness-sdk/pull/3996); do not submit a
+duplicate entry. [PR #5852](https://github.com/strands-agents/harness-sdk/pull/5852)
+tracks updating its source/documentation links. The snippet below shows the
+intended monorepo destinations, not a claim that the catalog update is deployed:
 
 ```yaml
 name: strands-deepkeep
@@ -61,8 +71,8 @@ integrationType: plugin
 languages:
   python:
     package: strands-deepkeep
-github: https://github.com/Deepkeepai/strands-deepkeep
-docsUrl: https://github.com/Deepkeepai/strands-deepkeep#readme
+github: https://github.com/Deepkeepai/deepkeep-integrations/tree/main/integrations/strands
+docsUrl: https://github.com/Deepkeepai/deepkeep-integrations/tree/main/integrations/strands#readme
 addedDate: 2026-08-26
 maintainedBy: partner
 ```
